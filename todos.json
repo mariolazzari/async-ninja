@@ -1,0 +1,17 @@
+[
+  {
+    "text": "Text 1",
+    "author": "Author One",
+    "points": 50
+  },
+  {
+    "text": "Text 2",
+    "author": "Author Two",
+    "points": 50
+  },
+  {
+    "text": "Text 3",
+    "author": "Author Three",
+    "points": 50
+  }
+]
