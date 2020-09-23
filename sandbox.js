@@ -58,3 +58,9 @@ getSomething().then((data) => {
 }).catch((err) => {
   console.log(err);
 });
+
+// fetch api
+fetch("./todos.json")
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
