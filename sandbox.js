@@ -70,12 +70,17 @@ fetch("./todos.json")
 const getTodosAsync = async (url) => {
   try {
     const res = await fetch(url);
-    const data = await res.json();
+    if (res.status !== 200) {
+      throw new Error("Cannot fetch data.");
+    }
 
+    const data = await res.json();
     return (data);
   } catch (error) {
     console.log(error);
   }
 };
 
-getTodosAsync("./todos.json").then((data) => console.log(data));
+getTodosAsync("./todos.json")
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err.message));
